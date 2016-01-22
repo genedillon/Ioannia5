@@ -1,0 +1,992 @@
+/* Prevent user selections  */
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	box-sizing: border-box;
+}
+body {
+	position: absolute;
+	height: 1920px;
+	width: 1080px;
+	margin: 0px;
+	padding: 0px;
+	font-family: open_sansregular, serif;
+	overflow: hidden;
+	background: white;
+}
+a {
+	text-decoration: none;
+}
+
+/* =================== STATIC ==================== */
+.listingsContainer {
+	width: 1080px;
+	height: 1608px;
+	/*padding: 15px;*/
+	/*border: solid 1px #888;*/
+	font-size: 18px;
+	/*font-family: Arial, sans-serif;*/
+	font-family: open_sanssemibold, serif;
+	background: #BDD9FF;
+	/*display: none;*/
+	opacity: 0;
+}
+.listingsNoSlide {
+	width: 1820px;
+}
+
+.col0 {
+	position: absolute;
+	top: 0;
+	left: 850px;
+	font-size: 8px;
+	display: none;
+}
+.container {
+	width: 100%; /*sets all column heights*/
+	height: 100%;
+	/*background: #ddd; */
+	float: left;
+	vertical-align: top;
+	box-sizing: border-box;
+	/*border: 1px solid #888;*/
+}
+/*.child {
+	padding-left: 20px;
+}*/
+.col1Listings, .col2Listings, .col3Listings, .col4Listings, .col5Listings {
+	position: relative;
+}
+.cont2, .cont3, .cont4, .cont5 {  /*debug divs*/
+	padding: 2px 0;
+	color: rgb(27, 53, 106);
+	background: rgba(0, 0, 0, 0.05);
+	text-align: center;
+}
+.directoryContainer span {
+	color: #ff0000;
+	font-size: 9px;
+	position: absolute;
+	left: 62px;
+	/*margin-left: -36px;*/
+	margin-top: 8px;
+	background: white;
+	z-index: 999;
+}
+.debugHeight {
+	    position:absolute;
+	    top:0px;
+	    left:80px;
+	    font-size:70px;
+	    text-shadow: 2px 0px 0px white, -2px 0px 0px white, 0px 2px 0px white, 0px -2px 0px white;
+	    background: none;
+}
+.staticListingLine span {
+	/*margin-left: 159px;*/
+	left: 40px;
+	margin-top: -3px;
+	color: #0468C7;
+}
+.lineVert {
+	width: 1px;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.49);
+	float: left;
+}
+.staticHeader {
+	position: relative;
+	background: #86B0DE;
+	color: #ffffff;
+	margin-bottom: .9em;
+	border-top: 3px solid #516FAA;
+}
+.removeHeader {
+	display: none;
+}
+.staticListingLine {
+	position: relative;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, rgba(151, 177, 212, 0.7) 30%, rgba(151, 177, 212, 0.7) 70%, rgba(255, 255, 255, 0) 95%);
+	background: #A5CDF3;
+	width: 78%;
+	height: 1px;
+	/*margin-left: 6%;*/
+	margin: 0px 6% 0px 10%;
+}
+
+/* ==== Column Height Overrides ==== */
+/*.col1 {*/
+	/*height: 500px !important;*/
+/*}*/
+/*.col2 {*/
+	/*height: 500px !important;*/
+/*}*/
+/*.col3 {*/
+	/*height: 500px !important;*/
+/*}*/
+/*.col4 {*/
+	/*height: 500px !important;*/
+/*}*/
+/*.col5 {*/
+	/*height: 500px !important;*/
+/*}*/
+#pleaseWait {
+	position: absolute;
+	top: 700px;
+	width: 1080px;
+	height: 665px;
+	padding: 15px;
+	font-size: 36px;
+	font-style: italic;
+	text-align: center;
+	color: #3C5C84;
+	z-index: 999999;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+.directoryText {
+	position: absolute;
+	top: 897px;
+	left: 686px;
+	width: 599px;
+	font-family: open_sanslight, serif;
+	font-size: 72px;
+	color: rgba(255, 255, 255, 0.68);
+	letter-spacing: 4px;
+	line-height: 1.2;
+	text-align: center;
+	background: linear-gradient(to right, rgba(106, 146, 199, 0.38) 0%, rgba(106, 146, 199, 0.38) 100%);
+	box-sizing: border-box;
+	/*display: none;*/
+}
+
+/* ============ HEADER / PROPERTY / WELCOME ============ */
+.pageHeader {
+	position: relative;
+	/*display: table;*/
+	left: 0px;
+	top: 0px;
+	width: 1080px;
+	height: 123px;
+	background: rgba(255, 255, 255, .70);
+	font-family: open_sanssemibold, serif;
+	border-bottom: 3px solid #516FAA;
+	box-shadow: 0px 0px 10px rgba(81, 109, 147, 0.47);
+	z-index: 10;
+}
+.horzLine {
+	position: absolute;
+	top: 54px;
+	width: 520px;
+	height: 1px;
+	background: rgba(38, 75, 112, .40);
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.addressCont {
+/*	position: absolute;*/
+/*	left: 54px;
+	top: 25px;*/
+	/*width: 1080px;*/
+	height: 120px;
+	font-family: droid_serifbold, sans-serif;
+	font-size: 46px;
+	color: #3C5C84;
+	letter-spacing: 1px;
+	text-align: left;
+	display: table;
+	vertical-align: middle;
+	float: left;
+}
+.addressText {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 30px;
+}
+.buildingName {
+	font-size: 46px;
+}
+.buildingAddress {
+	font-size: 30px;
+}
+/*.pageHeaderTall {
+	height: 100px;
+}*/
+
+
+/*.addressMainLogo {
+	left: 310px;
+}*/
+
+/* ============ DATE / TIME ============ */
+.timeCont {
+	left: 700px;
+	bottom: 40px;
+	width: 360px;
+	font-size: 40px;
+	text-align: right;
+}
+.dateCont {
+	left: 700px;
+	bottom: 15px;
+	width: 360px;
+	font-size: 23px;
+	font-weight: normal;
+	text-align: right;
+}
+.dateCont,
+.timeCont {
+	position: absolute;
+	color: #30559b;
+	letter-spacing: 1px;
+}
+
+/*.timeDateNoTSL {
+	left: 705px;
+}*/
+
+.timeContNoTSLnoSlide {
+	left: 8px;
+	top: 1055px;
+	height: 18px;
+	width: 360px;
+	font-size: 14px;
+	text-align: left;
+}
+
+.dateContNoTSLnoSlide {
+	left: 1514px;
+	top: 1055px;
+	height: 18px;
+	width: 400px;
+	font-size: 14px;
+	font-weight: normal;
+	text-align: right;
+}
+
+
+/* ============ BUILDING INFO ============ */
+#buildingInfoBox {
+	position: absolute;
+	top: 1728px;
+	left: 0;
+	width: 1080px;
+	height: 117px;
+	background: #F4F9FF;
+}
+.bldgInfo {
+	/*position: absolute;*/
+/*	left: 1363px;
+	top: 831px;
+	width: 507px;
+	height: 139px;
+	 background: rgba(255, 255, 255, .5);
+	 border-radius: 10px;
+	margin-top: 12px;
+	z-index: 1;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);*/
+	display: none;
+	line-height: 1.3;
+}
+
+.bldgInfoNoTSL {
+	left: 0px;
+	top: 0px;
+	width: 650px;
+	height: 117px;
+    	/*background: rgba(255, 255, 255, .35);*/
+	z-index: 100;
+	border-radius: 0px;
+	margin-top: 0px;
+	box-shadow: none;
+	display: table;
+	position: relative;
+}
+
+
+.bldgInfoNoTSLNoSlide {
+	left: 1010px;
+	top: 5px;
+	width: 700px;
+	height: 90px;
+    	background: rgba(255, 255, 255, 0);
+   	 z-index: 100;
+	 border-radius: 0px;
+	margin-top: 0px;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.vertLine {
+	position: absolute;
+	top: 20px;
+	left: 325px;
+	width: 1px;
+	height: 80px;
+	background: rgba(38, 75, 112, .30);
+	z-index: 150;
+}
+
+.vertLineSlideNoTSL {
+	top: 843px;
+	left: 1590px;
+}
+
+.vertLineNo {
+	top: 10px;
+	left: 1310px;
+	height: 80px;
+}
+
+.mgmtCont,
+.leaseCont {
+	display: table-cell;
+	width: 50%;
+	padding: 0 8px;
+	font-family: open_sanssemibold, serif;
+	font-size: 13px;
+	color: #264b70;
+	text-align: center;
+	vertical-align: middle;
+}
+
+
+/* ============ MAIN LOGO ============ */
+.mainLogo, .mainLogoOnly {
+	height: 100%;
+	display: table;
+	float: left;
+	margin-right: -20px;
+}
+/*.mainLogoBoxAddToAddress {
+	height: 100%;
+	display: table;
+	float: left;*/
+	/*position: absolute;*/
+	/*left: 48px;*/
+	/*top: 8px;*/
+	/*width: 250px;*/
+	/*height: 80px;*/
+/*}*/
+/*.mainLogoBoxReplaceAddress {
+	display: table;
+	left: 48px;
+	top: 8px;
+	width: 500px;
+	height: 80px;
+}*/
+.mainLogoPlacement {
+	display: table-cell;
+	padding-left: 30px;
+	/*width: 100%;*/
+	font-family: open_sanssemibold, serif;
+	font-size: 14px;
+	color: #264b70;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* ============================  DIRECTORY  ==============================  */
+.directoryContainer {
+	position: absolute;
+	display: table-cell;
+	left: 0px;
+	top: 120px;
+	width: 1080px;
+	height: 1608px;
+	box-sizing: border-box;
+}
+.directoryContainerSlideshow {
+	top: 702px;
+	height: 1026px;
+}
+.directoryContainerSlideshow #listings {
+	height: 1026px;
+	border-bottom: 3px solid #516FAA;
+}
+.companyListing {
+	position: relative;
+	color: rgb(27, 53, 106);
+}
+div[class*="setOne"] {
+	box-sizing: border-box;
+	float: left;
+}
+
+/* ===================== COMBINED OR COMPANY LISTINGS ====================== */
+.setOne0, .setOne1, .setOne2, .setOne3, .setOne4, .setOne5 {
+	padding-bottom: .35em;
+	padding-top: .35em;
+}
+.setOne0 {
+	width: 0%;
+	padding-left: 0em;
+	padding-right: 0em;
+	text-align: center;
+}
+.indentedInd div[data-type*="Ind"] .setOne0 {
+	width: 4%;
+	padding-top: .1em;
+	font-size: 92%;
+}
+.setOne1, .continued {
+	padding-left: 5%;
+}
+.setOne1 {
+	width: 63%;
+	padding-left: 6%;
+	padding-right: .5em;
+	text-align: left;
+}
+.indentedInd div[data-type*="Ind"]  .setOne1 {
+	width: 59%;
+	padding-top: .1em;
+	font-size: 92%;
+}
+.setOne2 {
+	width: 37%;
+	padding-left: .5em;
+	padding-right: .5em;
+	text-align: center;
+}
+.indentedInd div[data-type*="Ind"]  .setOne2 {
+	padding-top: .1em;
+	font-size: 92%;
+}
+.setOne3 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+.setOne4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+.setOne5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+
+
+/* =========================  TSLIVE WEATHER  ========================  */
+.weatherContainer {
+	position: absolute;
+	display: table-cell;
+	left: 40px;
+	top: 837px;
+	width: 529px;
+	height: 142px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+	z-index: 2100;
+	opacity: 0;
+}
+.weatherContainerSingle {
+	position: absolute;
+	display: table-cell;
+	top: -10px;
+	width: 270px;
+	height: 110px;
+	z-index: 2100;
+	opacity: 1;
+}
+.weatherContainerSingleWrapper {
+	position: absolute;
+	left: 768px;
+	top: 1745px;
+	width: 258px;
+	height: 90px;
+/*	background: rgba(141, 178, 210, 0.29);
+	border: solid #9BBFDE 1px;
+	border-radius: 10px;*/
+	z-index: 2100;
+}
+.weatherData {
+	position: absolute;
+	z-index: 1;
+}
+
+
+/* ==========================  TSLIVE NEWS  ========================  */
+.newsContainer {
+	position: absolute;
+	left: 0px;
+	top: 1728px;
+	width: 1080px;
+	height: 145px;
+	background: rgba(255, 255, 255, .5);
+	/*border-radius: 10px;*/
+	/*margin-top: 12px;*/
+	z-index: 1;
+	/*box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);*/
+}
+
+
+/* ============================ SLIDESHOW ========================== */
+.slideWrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: table;
+	/*opacity: 0;*/
+}
+.pics, .pics2, .pics3 {
+	position: absolute;
+	overflow: hidden;
+	display: table-cell;
+}
+
+.pics, .pics2, .pics3 {
+	left: 0px; 
+	top: 123px;  
+	width: 1080px; 
+	height: 579px; 
+	background: #C6D4EC;
+	background: linear-gradient(#A8C5D9,#C6D6EC,#A8C5E6);
+}
+.pics img, .pics2 img, .pics3 img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.tsInfo {
+	display: none;
+}
+.tsInfoNoTSLive {
+	position: absolute;
+	top: 1895px;
+	left: 452px;
+	display: block;
+}
+
+/* ======================== SCROLLING MESSAGES =========================== */
+#scrollingMessage {
+	position: absolute;
+	top: 1872px;
+	width: 1080px;
+	height: 48px;
+	background: #5887c6;
+	background: linear-gradient(to left, #30559b 0%, #76ade6 100%);
+	border-top: solid 1px white;
+	border-bottom: solid 1px #223247;
+	z-index: 2000;
+}
+#scrollingMessage.scrollNoTSLive {
+	top: 1845px;
+	border-top: solid 1px #223247;
+}
+#tickerMessage {
+	opacity: 0; /* hide scroller ugly state, will show when script loads */
+}
+#scrollingMessage>.tickercontainer {
+	position: absolute;
+	overflow: hidden;
+	background: rgba(0, 88, 149, 0);
+	width: 1080px;
+	height: 75px;
+	margin: 0;
+	padding: 0;
+}
+/* this serves as a mask. so you get a sort of padding both left and right */
+.tickercontainer .mask {
+	position: relative;
+	overflow: hidden;
+	left: 0px;
+	top: 7px;
+	width: 1080px;
+}
+ul.newsticker {
+	position: relative;
+	background: rgba(255, 0, 0, .5);
+	left: 1080px; /* must be @ 20px more than width */
+	font-size: 25px;
+	font-style: italic;
+	color: #FFFFFF;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.newsticker li {
+	float: left; /* important - display inline gives incorrect results when you check for elem's width */
+	margin: 0;
+	padding: 0px;
+	white-space: nowrap; /* important - keeps text from wrapping */
+}
+
+/*======================== TWITTER =======================*/
+#tweetsCont {
+	position: absolute;
+	top: 1864px;
+	left: 0;
+	width: 1080px;
+	height: 56px;
+	/*border-top: solid 1px #223247;*/
+	/*border-bottom: solid 1px #223247;*/
+	background: #2B4B86;
+	z-index: 3000;
+}
+
+
+/*======================== TWITTER =======================*/
+#tweetsCont {
+	position: absolute;
+	top: 1873px;
+	left: 0;
+	width: 1080px;
+	height: 47px;
+	background: #2B4B86;
+	z-index: 3000;
+}
+.twitterIcon {
+	position: absolute;
+	top: 1875px;
+	left: 10px;
+	height: 42px;
+	fill: white;
+	width: 42px;
+	z-index: 3000;
+}
+.title {
+	font-size: 22px;
+	margin: 0px 0px 0px 20px;
+	color: #777;
+	text-align: left;
+}
+#tweetStore {
+	display: none;
+}
+
+/*** dev buttons ***/
+#slideBtn, #allBtn, #allAutoBtn,
+#singleBtn, #stopDisplayBtn,
+#reloadBtn {
+	width: 130px;
+	height: 40px;
+	margin: 5px 5px 5px 5px;
+	/*white-space: normal;*/
+}
+
+/*** slide mode rules  ***/
+#tweetSlideHolder {
+	position: absolute;
+	left: 70px; 
+	top: 0px;
+	width: 996px;
+	height: 47px;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	background: transparent;
+	overflow: hidden;
+}
+.slideCont {
+	position: absolute;
+	left: 0px; 
+	top: 0px;
+	width: 100%; 
+	height: 47px;
+	padding: 0px;
+	overflow: hidden;
+	opacity: 1.0;
+	display: table;
+}
+.slideTweet {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 15px;
+	line-height: 16px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*** static mode rules ***/
+#tweetStaticCont {
+	position: absolute;
+	left: 0px; top: 100px; /*35px;*/
+	width: 400px; height: 500px;
+	border: 1px solid #777;
+	padding: 4px;
+	overflow: auto;
+}
+
+/*** auto mode rules ***/
+#tweetAutoScrollFrame {
+	position: absolute;
+	left: 0px; top: 100px; /*35px;*/
+	width: 400px; height: 500px;
+	padding: 0px;
+	border: 1px solid #777;
+	overflow: hidden;
+}
+#tweetAutoScrollCont1,
+#tweetAutoScrollCont2,
+#tweetAutoScrollCont3 {
+	position: relative;
+	left: 0px; top: 0px;
+	width: 392px; /*height: 500px;*/
+	padding: 4px;
+	border-top: 1px solid #777;
+}
+
+/*** single mode rules ***/
+#tweetSingleFrame {
+	position: absolute;
+	left: 0px; top: 100px; /*35px;*/
+	width: 400px; height: 120px;
+	max-width: 400px; max-height: 120px;
+	overflow: hidden; /*auto*/
+	border: 1px solid #000;
+}
+#tweetSingleCont {
+	padding: 8px;
+	overflow: hidden;
+}
+
+/* tweet text formatting */
+#tweetSlideFrame .tweet,
+#tweetSlideFrame .error,
+#tweetStaticCont .tweet,
+#tweetStaticCont .error,
+#tweetAutoScrollCont1 .tweet,
+#tweetAutoScrollCont1 .error,
+#tweetAutoScrollCont2 .tweet,
+#tweetAutoScrollCont2 .error,
+#tweetAutoScrollCont3 .tweet,
+#tweetAutoScrollCont3.error,
+#tweetSingleCont .tweet,
+#tweetSingleCont .error {
+	padding: 10px 0px 0px 15px;
+}
+/* screenname */
+.slideTweet  span:first-of-type,
+#tweetStaticCont span:first-of-type,
+#tweetAutoScrollCont1 span:first-of-type,
+#tweetAutoScrollCont2 span:first-of-type,
+#tweetAutoScrollCont3 span:first-of-type,
+#tweetSingleCont span:first-of-type {
+	font-weight: bold;
+}
+/* date-time */
+.slideTweet span:last-of-type,
+#tweetStaticCont span:last-of-type,
+#tweetAutoScrollCont1 span:last-of-type,
+#tweetAutoScrollCont2 span:last-of-type,
+#tweetAutoScrollCont3 span:last-of-type,
+#tweetSingleCont span:last-of-type {
+	font-size: 13px;
+	font-style: italic;
+}
+/* errors */
+.slideTweet .error,
+#tweetStaticCont .error,
+#tweetSingleCont .error,
+#tweetAutoScrollCont1 .error,
+#tweetAutoScrollCont2 .error,
+#tweetAutoScrollCont3 .error {
+	font-style: italic;
+	color: #f00;
+}
+
+
+/*======================= CLEARFIX =====================*/
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	content: ".";
+	height: 0;
+}
+
+
+
+/*======================================== FONTS ================================== */
+@font-face {
+	font-family: 'open_sanslight';
+	src: url('../fonts/OpenSans-Light-webfont.eot');
+	src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sansregular';
+	src: url('../fonts/OpenSans-Regular-webfont.eot');
+	src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sanssemibold';
+	src: url('../fonts/OpenSans-Semibold-webfont.eot');
+	src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sansbold';
+	src: url('../fonts/OpenSans-Bold-webfont.eot');
+	src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sansextrabold';
+	src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
+	src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'droid_serifbold';
+	src: url('../fonts/DroidSerif-Bold-webfont.eot');
+	src: url('../fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+		url('../fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+		url('../fonts/DroidSerif-Bold-webfont.svg#droid_serifbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+
+.directoryContainer {
+	left: 10px !important;
+	top: 1101px !important;
+	width: 1060px !important;
+	height: 768px !important;
+}
+.container {
+	padding: 15px 0;
+}
+.listingsContainer {
+    width: 1060px;
+    height: 768px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, .0);
+    /* display: none; */
+    opacity: 0;
+}
+
+.pageHeader {
+    width: 1080px;
+    height: 98px;
+    background: rgba(255, 255, 255, .0);
+    border-bottom: 0px solid rgba(255, 255, 255, .0);
+    box-shadow: 0px 0px 10px rgba(81, 109, 147, .0);
+}
+
+.addressCont {
+    height: 95px;
+    color: #fff;
+}
+
+.dateCont, .timeCont {
+    position: absolute;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.timeCont {
+    left: 700px;
+    bottom: 1840px;
+    width: 360px;
+    font-size: 40px;
+    text-align: right;
+}
+.setOne0 {
+	width: 17%;
+	text-align: right;
+}
+.setOne0 a {
+	background: #005BAA;
+	padding: 3px 6px 2px 6px;
+	margin-right: 5px;
+	color: white;
+	border-radius: 20px;
+	font-size: 10px;
+}
+.indentedInd div[data-type*="Ind"] .setOne0 a {
+	display: none;
+}
+.indentedInd div[data-type*="Ind"] .setOne0 {
+	width: 17%;
+	padding-top: .1em;
+	font-size: 92%;
+}
+.setOne1 {
+	width: 64%;
+	padding-left: 0px;
+}
+.indentedInd div[data-type*="Ind"]  .setOne1 {
+	width: 64%;
+	padding-top: .1em;
+	font-size: 92%;
+}
+.setOne2 {
+	width: 19%;
+}
+.indentedInd div[data-type*="Ind"]  .setOne2 {
+	width: 19%;
+	padding-top: .1em;
+	font-size: 92%;
+}
+.lineVert {
+	background: none;
+}
+
+/* =============================== PDF VIEWER ============================= */
+#pdfWindow {
+	position: absolute;
+	top: 500px;
+	left: 20px;
+	width: 1040px;
+	height: 1250px;
+	display: none;
+	z-index: 3000;
+	border: solid rgb(138, 169, 226) 3px;
+}
+#pdfMask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.65);
+	z-index: 2900;
+	display: none;
+}
+.closePDF {
+	position: absolute;
+	top: 1671px;
+	left: 904px;
+	width: 130px;
+	height: 51px;
+	padding-top: 8px;
+	font-size: 24px;
+	background: rgb(48, 85, 155);
+	color: white;
+	border: solid 1px white;
+	border-radius: 12px;
+	font-family: open_sanssemibold, serif;
+	/*box-shadow: 0 0 15px rgba(0, 0, 0, 0.43);*/
+	box-shadow: 0 0 0px 1.2px white, 1px 1px 6px rgba(13, 44, 66, 0.67); /* produces a better stroke that border */
+	text-align: center;
+	box-sizing: border-box;
+	z-index: 3200;
+	display: none;
+	cursor: pointer;
+}
+/*.mapURL a {
+	pointer-events: none;
+	text-decoration: none;
+}*/

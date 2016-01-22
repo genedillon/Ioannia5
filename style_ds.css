@@ -1,0 +1,2132 @@
+* {
+	-webkit-touch-callout: none; /* Prevent user selections  */
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+body {
+	position: absolute;
+	height: 1920px;
+	width: 1080px; 
+	margin: 0px;
+	padding: 0px;
+	font-family: open_sansregular, serif;
+	overflow: hidden;
+	background: gray;
+}
+a {
+	text-decoration: none;
+}
+.infoDiv {
+	background: #597EAF;
+	border-radius: 50%;
+	height: 37px;
+	width: 37px;
+	border: solid 1px #436DA2;
+	box-sizing: border-box;
+	float: right;
+/*	margin-right: 10px;*/
+}
+.infoDiv img {
+	position: relative;
+	top: -1px;
+	left: -1px;
+}
+.iconInfo { /* svg icon */
+    height: 34px;
+    width: 28px;
+    fill: white;
+}
+.offsetIconInfo {
+	margin-left: 4px;
+}
+
+/* ============ HEADER / PROPERTY / WELCOME ============ */
+.pageHeader {
+	position: relative;
+	left: 0px; 
+	top: 0px;
+	width: 1080px; 
+	height: 98px;
+	background: #ffffff;
+	font-family: open_sanssemibold, serif;
+	border-bottom: solid 3px #516FAA;
+}
+.addressCont {
+	position: relative;
+	left: 35px;
+	width: 850px; 
+	height: 98px;
+	font-family: open_sanssemibold, sans-serif; 
+	font-size: 55px; 
+	line-height: 1.1;
+	color: #4b69a6;  
+	letter-spacing: 1px;
+	text-align: left; 
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0;
+}
+.mainLogo, .mainLogoOnly {
+	height: 100%;
+	display: table;
+	float: left;
+	margin-right: -20px;
+}
+.mainLogoPlacement {
+	display: table-cell;
+	padding-left: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+.buildingName {
+	font-size: 55px;
+}
+.buildingAddress {
+	font-size: 40px;
+}
+.pageHeaderTall {
+	height: 146px; 
+}
+.pageHeaderShort {
+	height: 202px;
+}
+
+
+/* ============ DATE / TIME ============ */
+.dateCont {
+	left: 749px;
+	bottom: 15px;
+	width: 300px;
+	font-size: 23px;
+	font-weight: normal;
+	text-align: right;
+}
+.timeCont {
+	left: 840px; 
+	bottom: 40px; 
+	width: 210px;
+	font-size: 40px; 
+	text-align: right;
+}
+.dateCont,
+.timeCont {
+	position: absolute;
+	color: #4b69a6; 
+	letter-spacing: 1px;
+}
+
+
+/* ============ BUILDING INFO ============ */
+.bldgInfo {
+	position: absolute;
+	display: table;
+	top: 0;
+	left: 355px; 
+	width: 538px;
+	height: 140px;
+}
+.vertLine {
+	position: absolute;
+	left: 275px;
+	bottom: 20px;
+	width: 1px;
+	height: 111px;
+	background: rgba(38, 75, 112, .30);
+}
+.mgmtCont,
+.leaseCont {
+	display: table-cell;
+	width: 50%;
+	font-family: open_sanssemibold, serif;
+	font-size: 18px;
+	color: #264b70;
+	text-align: center;
+	vertical-align: middle;
+}
+.bldgInfoContainer .tbl_wrapper {
+	padding-bottom: 30px;
+}
+/* ======================  BUILDING INFO (BUTTON) ========================  */
+.bldgInfoContainer {
+	height: 500px;
+	opacity: 0;
+	font-size: 16px;
+}
+.bldgInfoContents {
+	display: table;
+	width: 80%;
+	min-height: 250px;
+	margin: 40px 10%;
+	padding: 22px;
+	color: white;
+	background: rgba(87, 118, 160, 0.5);
+	border-radius: 20px;
+	border: solid 1px rgb(68, 107, 163);
+	box-sizing: border-box;
+	text-shadow: 0px 0px 6px rgb(66, 115, 186);
+}
+.bldgInfoWide {
+	width: 40%;
+	float: left;
+}
+.bldgInfoWide.mgmtCont {
+	margin: 150px 3% 0 7%;
+}
+.bldgInfoWide.leaseCont {
+	margin: 150px 7% 0 3%;
+}
+.infoHead {
+	font-family: open_sansbold, serif;
+}
+.mgmtInfo,
+.leaseInfo {
+	display: table-cell;
+	font-family: open_sanssemibold, serif;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* ============== NAVAGATION MENU ================  */
+.btnContWrapper {
+	position: absolute; 
+	top: 1558px;
+	left: 0px;
+	z-index: 10;
+}
+.btnContainer {
+	left: 0px;
+	top: 0px;
+	width: 1080px;  
+	background: transparent;
+	vertical-align: middle;
+	z-index: 50;
+	opacity: 0;
+	display: table-cell;
+}
+.btnContainerTall {
+	margin-top: 0px;
+}
+.btnContainerShort {
+	margin-top: 0px;
+}
+.btnCol1 {
+	width: 830px; 
+	margin: 0 auto;
+}
+.twoRow1, .twoRow2 {
+	margin: 0 auto;
+}
+.disableBtns {
+	pointer-events: none;
+}
+
+/* ============HEX BUTTON=============*/
+/*.button1 {
+	height: 85px;
+	width: 345px;
+	margin: 10px auto;
+}
+.buttonScale75-col2 {
+	transform: scale(.75);
+	margin-left: -20px; 
+	margin-top: -2px; 
+	margin-bottom: -6px; 
+}
+.buttonScale90-col1 {
+	transform: scale(.9);
+	margin-top: -2px; 
+	margin-bottom: -3px; 	
+}
+.btnOffset {
+	margin-left: -174px;
+}
+.btnText {
+	margin-left: 20px;
+	margin-top: 25px;
+	font-family: open_sanssemibold, serif;
+	font-size: 18px;
+	color: #EBEEF2;
+	text-shadow: 1px 1px 2px rgba(0, 21, 74, 0.16);
+	float: left;
+}
+.btnIcon {
+	float: left;
+}*/
+
+/*==========SQUARE BUTTON =============*/
+.button {
+	float: left;
+	cursor: pointer;
+}
+.button2 {
+	height: 52px;
+	width: 246px;
+	margin: 10px 8px 10px 8px;
+	border-radius: 12px;
+	overflow: hidden;
+	/*border: solid 1px white;*/
+	box-shadow: 1px 1px 6px rgba(13, 44, 66, 0.67);
+	box-shadow: 0 0 0px 1.2px white, 1px 1px 6px rgba(13, 44, 66, 0.67); /* produces a better stroke that border */
+	background: rgb(48, 85, 155);	
+	line-height: 1.2;
+}
+/*.button2Scale75-col2 {
+	width: 260px;
+	height: 60px;
+	margin-top: 15px; 
+	margin-bottom: 15px;
+}
+.button2Scale90-col1 {
+	width: 300px;
+	height: 60px;
+	margin-top: 15px; 
+	margin-bottom: 15px; 	
+}*/
+.btnOffset2 {
+	margin-left: -131px;
+}
+.btnText2 {
+	height: 52px;
+	width: 184px;
+	padding-left: 12px;
+	font-family: open_sanssemibold, serif;
+	font-size: 16px;
+	color: #EBEEF2;
+	text-align: left;
+	text-shadow: 1px 1px 2px rgba(0, 21, 74, 0.16);
+	background: rgb(106, 146, 199);
+	border-left: solid 1px #B1BFD2;
+	vertical-align: middle;
+	display: table-cell;
+	box-sizing: border-box;
+}
+/*.button2Scale90-col1 .btnText2 {
+	height: 60px;
+	font-size: 18px;
+}
+.button2Scale75-col2  .btnText2 {
+	height: 60px;
+	padding-left: 15px;
+	font-size: 16px;
+}*/
+.btnIcon2 {
+	margin-top: -10px;
+	float: left;
+	background: rgb(48, 85, 155);
+	transform: scale(.8);
+	margin-left: -11px;
+	margin-right: -9px;
+}
+/*.button2Scale90-col1 .btnIcon2 {
+	height: 60px;
+	margin-top: 0px;
+}
+.button2Scale75-col2 .btnIcon2 {
+	height: 60px;
+	margin-top: 0px;
+}*/
+
+/*==Button SVG Icons==*/
+.svgNavIcon {
+	width: 62px;
+	height: 46px;
+	float: left;
+	padding: 3px 0;
+	fill: white;
+	-webkit-filter: drop-shadow( 1px 1px 1px rgba(0,0,0,.3) );
+	filter: drop-shadow( 1px 1px 1px rgba(0,0,0,.3) );
+}
+/*.button2Scale90-col1 .svgNavIcon { 
+	width: 74px;
+	height: 50px;
+	padding: 4px 0;
+}
+.button2Scale75-col2 .svgNavIcon { 
+	width: 65px;
+	height: 50px;
+	padding: 5px 0;
+}*/
+.svgNavIconTSLive { /*SVG icon*/
+	width: 59px;
+	height: 47px;
+	float: left;
+	padding: 3px 0;
+	fill: white;
+	-webkit-filter: drop-shadow( 1px 1px 1px rgba(0,0,0,.3) );
+	filter: drop-shadow( 1px 1px 1px rgba(0,0,0,.3) );
+}
+.iconTraffic { /*SVG icon*/
+	width: 69px;
+	padding-top: 4px;
+}
+.iconTransit {
+	width: 55px;
+	padding-top: 4px;
+}
+/*==== end buttons ====*/
+
+.alignBtnsBottom {
+	padding-bottom: 50px;
+	vertical-align: bottom;
+	box-sizing: border-box;
+}
+.contTSLiveBtns {
+	margin: 0px auto; 
+	clear: both;
+}
+.buttonTSLive {
+	position: relative;
+	width: 137px;
+	height: 55px;
+	margin: 8px 9px;
+	float: left;
+	background: rgb(48, 85, 155);
+	/*border: solid 1px white;*/
+	border-radius: 8px;
+	box-shadow: 0 0 0px 1.2px white, 1px 1px 6px rgba(13, 44, 66, 0.67); /* produces a better stroke that border */
+	cursor: pointer;
+}
+.buttonTSLive .btnIcon {
+	margin: 0px 0 0 2px;
+	border: none;
+	transform: scale(.8);
+}
+.btnTextTSLive {
+	position: absolute;
+	left: 60px;
+	width: 75px;
+	margin-top: 12px;
+	font-family: open_sanssemibold, serif;
+	font-size: 13px;
+	color: #EBEEF2;
+	line-height: 1.2;
+	text-shadow: 1px 1px 2px rgba(0, 21, 74, 0.16);
+	text-align: center;
+}
+#amenityBtn div {
+	margin-left: -10px;
+}
+#amenityBtn img {
+	margin-left: 2px;
+}
+#trafficBtn div {
+	margin-left: -12px;
+}
+#trafficBtn img {
+	margin-left: 1px;
+	margin-top: 1px;
+}
+#transitBtn div {
+	width: 82px;
+	margin-left: -12px;
+}
+#transitBtn img {
+	margin-left: 0px;
+}
+
+
+/* ============================  DIRECTORY  ==============================  */
+.directoryContainer {
+	position: absolute;
+	display: table-cell;
+	left: 0px; 
+	top: 680px; 
+	height: 769px;
+	box-sizing: border-box;
+	opacity: 0;
+	overflow: visible !important;  /* keeps animated list-window from gettting cut off */
+}
+.tenantContainer,
+.companyContainer,
+.individualsContainer,
+.bldgInfoContainer,
+.detailContainer,
+.list12Container,
+.bldgAmenContainer,
+.spaceContainer,
+.annContainer {
+	width: 1080px;
+}
+.list-window {
+	position: absolute;
+	overflow: hidden;
+	width: 1080px;
+	height: 768px;
+	background: linear-gradient(to bottom, rgba(195, 220, 255, 0.6) 0%, rgba(176, 207, 249, 1) 100%);
+	border-bottom: 3px solid #6785C0;
+	opacity: 1;
+}
+.list-window-fix {
+	opacity: .99; /* Redraws div to fix rending bug */
+}
+.listHeader div[class*="set"] {
+	padding-top: 3px;
+}
+.bldgInfoHeader,
+.spaceTitle.boxListings,
+.bldgAmenTitle.boxListings,
+.annTitle,
+.list12Title {
+	margin: 4px 0 0 40px;
+}
+#tbl_wrapper {
+	position: relative;
+}
+.detailContainer {
+	display: none;
+}
+.listHeader, .listDetailsHeader {
+	height: 43px;
+	font-family: open_sanssemibold, serif;
+	font-size: 24px;
+	color: #fff;
+	box-sizing: border-box;
+	border-top: 3px solid #516FAA;
+	background: #86B0DE;
+}
+.listDetailsHeader {
+	text-align: center;
+	display: none;
+}
+.listings {
+	top: 63px;
+	margin: 6px 0 0 0;
+	padding-top: 5px;
+	padding-bottom: 30px;
+}
+.boxListings.jpgParent, .boxListings.pdfParent {
+	cursor: pointer;
+}
+
+
+/* ============================== LISTING STYLES ========================== */
+.companyListing,
+.indivListing,
+.personListing,
+.detailListing,
+.noListing {
+	font-family: open_sanssemibold, serif;
+	font-size: 19px;
+	color: rgb(27, 53, 106);
+	margin-top: 8px;
+}
+.noListing {
+	margin-top: 80px;
+	text-align: center;
+}
+div[class*="setOne"] {
+	box-sizing: border-box;
+	float: left;
+}
+
+/* ===================== COMBINED OR COMPANY LISTINGS ====================== */
+.setOne0 {
+	width: 10%;
+	padding: 2px 0px 0px 12px;
+	text-align: center;
+}
+.setOne1 {
+	width: 52%;
+	padding: 6px 10px 10px 15px;
+	text-align: left;
+	/*display: block;*/  /*  if width 0% then 'none' else 'block'  */
+}
+.setOne2 {
+	width: 38%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	/*display: block;*/  /*  if width 0% then 'none' else 'block'  */
+}
+.setOne3 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	/*display: none;*/ /*  if width 0% then 'none' else 'block'  */
+}
+.setOne4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	/*display: none;*/ /*  if width 0% then 'none' else 'block'  */
+}
+.setOne5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	/*display: none;*/ /*  if width 0% then 'none' else 'block'  */
+}
+
+/* ===================== INDIVIDUAL LISTINGS ====================== */
+.individualsContainer {
+	display: none;
+}
+div[class*="setTwo"] {
+	box-sizing: border-box;
+	float: left;
+}
+.setTwo0 {
+	width: 10%;
+	padding: 2px 0px 0px 12px;
+	text-align: center;
+}
+.setTwo1 {
+	width: 52%;
+	padding: 6px 10px 10px 15px;
+	text-align: left;
+	/*display: block;*/  /*  if width 0% then 'none' else 'block'  */
+}
+.setTwo2 {
+	width: 38%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	/*display: block;*/  /*  if width 0% then 'none' else 'block'  */
+}
+.setTwo3 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	/*display: none;*/ /*  if width 0% then 'none' else 'block'  */
+}
+.setTwo4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	/*display: none;*/ /*  if width 0% then 'none' else 'block'  */
+}
+.setTwo5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	/*display: none;*/ /*  if width 0% then 'none' else 'block'  */
+}
+
+
+/* ===================== LISTING DETAILS ===================== */
+.detailInfo {
+	display: table-cell;
+	width: 100%;
+	height: 490px;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+.detailInfo span {
+	font-size: 24px;
+}
+.compDetailTitle, .indDetailTitle {
+	font-size: 26px;
+	font-family: open_sansbold, sans-serif;
+	padding: 0px 20px 10px 20px;
+}
+.compDetailInfo {
+	width: 100%;
+	float: left;
+	text-align: center;
+	display: none;
+}
+.listOfInd {
+	margin-top: 15px;
+	font-size: 16px;
+	text-decoration: underline;
+}
+.compIndivCont.activeIndCont {
+	font-size: 16px;
+}
+.emptyCont {
+	display: none;
+}
+
+
+/* =========================  SPACE AVAILABLE ==========================  */
+.spaceContainer {
+	position: absolute;
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+}
+.spaceContainer .list-window {
+	height: 618px;
+}
+.spaceContainer .listings {
+	border-bottom: none;
+}
+.spaceListing.boxListings {
+	width: 329px;
+	min-height: 150px;
+	background: rgba(87, 118, 160, 0.35);
+	font-size: 15px;
+	color: white;
+	text-shadow: 0px 0px 6px rgb(66, 115, 186);
+	border: solid 1px rgb(109, 142, 190);
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin: 23px 0 0 23px;
+	padding: 22px;
+	float: left;
+}
+.boxListings .setFour1 {
+	font-size: 16px;
+	font-family: open_sansbold;
+}
+.spaceContainer .boxListings .infoLink {
+	float: right;
+	margin: -10px -10px 0 0;
+}
+.noImage {
+	opacity: .3;
+}
+
+
+/* ==== SPACE AVAILABLE - LINED LISTING STYLES ==== */
+.spaceListing.linedListings {
+	width: 100%;
+	font-size: 15px;
+	box-sizing: border-box;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px;
+	font-family: open_sanssemibold, serif;
+	font-size: 17px;
+	color: rgb(27, 53, 106);
+	display: table;
+}
+.spaceTitle.linedListings {
+	margin: 6px 0 0 20px;
+}
+.spaceContainer .linedListings .infoLink {
+	float: none;
+	margin: 0;
+}
+.linedListings span.spaceSubset {
+	display: block;
+}
+.linedListings .spaceSubset {
+	font-size: 14px;
+}
+.spaceListing.linedListings div[class*="setFour"] {
+	display: table-cell;
+	vertical-align: top;
+}
+.setFour0, .setFour1, .setFour2, .setFour3, .setFour4, .setFour5, .setFour6 {
+	box-sizing: border-box;
+}
+.linedListings .setFour0 {
+	width: 10%;
+	padding: 2px 0px 0px 12px;
+	text-align: center;
+}
+.linedListings .setFour1 {
+	width: 18%;
+	padding: 6px 10px 10px 15px;
+	text-align: left;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFour2 {
+	width: 36%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFour3 {
+	width: 36%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFour4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFour5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFour6 {
+	width: 95%;
+	padding: 8px 8px 8px 8px;
+	text-align: center;
+}
+
+
+/* ==========================  BUILDING AMENITIES =========================  */
+.bldgAmenContainer {
+	position: absolute;
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+}
+.bldgAmenContainer .list-window {
+	top: 43px; 
+}
+.bldgAmenContainer .list-window {
+	height: 618px;
+}
+.bldgAmenContainer .listings {
+	border-bottom: none;
+}
+.bldgAmenListing.boxListings {
+	width: 329px;
+	min-height: 150px;
+	background: rgba(87, 118, 160, 0.5);
+	font-size: 15px;
+	color: white;
+	text-shadow: 0px 0px 6px rgb(66, 115, 186);
+	border: solid 1px rgb(68, 107, 163);
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin: 23px 0 0 23px;
+	padding: 22px;
+	float: left;
+}
+.bldgAmenContainer .boxListings .infoLink {
+	float: right;
+	margin: -10px -10px 0 0;
+}
+.boxListings .setThree1 {
+	font-size: 16px;
+	font-family: open_sansbold;
+}
+
+/* ==== BUIILDING AMENITIES - LINED LISTING STYLES ==== */
+.bldgAmenListing.linedListings {
+	width: 100%;
+	font-size: 15px;
+	box-sizing: border-box;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px;
+	font-family: open_sanssemibold, serif;
+	font-size: 17px;
+	color: rgb(27, 53, 106);
+	display: table;
+}
+.bldgAmenTitle.linedListings {
+	margin: 6px 0 0 20px;
+}
+.bldgAmenContainer .linedListings .infoLink {
+	float: none;
+	margin: 0;
+}
+.linedListings .bldgAmenSubset {
+	font-size: 14px;
+}
+.bldgAmenListing.linedListings div[class*="setThree"] {
+	display: table-cell;
+	vertical-align: top;
+}
+.setThree0, .setThree1, .setThree2, .setThree3, .setThree4, .setThree5, .setThree6 {
+	box-sizing: border-box;
+}
+.linedListings .setThree0 {
+	width: 10%;
+	padding: 2px 0px 0px 12px;
+	text-align: center;
+}
+.linedListings .setThree1 {
+	width: 35%;
+	padding: 6px 10px 10px 15px;
+	text-align: left;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setThree2 {
+	width: 55%;
+	padding: 6px 10px 10px 10px;
+	text-align: left;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setThree3 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setThree4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setThree5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setThree6 {
+	width: 95%;
+	padding: 8px 8px 8px 8px;
+	text-align: center;
+}
+
+/* ========================= ANNOUNCEMENTS ==========================  */
+.annContainer {
+	position: absolute;
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+}
+.annContainer .list-window {
+	top: 43px; 
+}
+.annContainer .list-window {
+	height: 618px;
+}
+.annContainer .listings {
+	border-bottom: none;
+}
+.annListing.boxListings{
+	position: relative;
+	width: 905px;
+	min-height: 70px;
+	margin: 23px 0 0 63px;
+	padding: 22px;
+	background: rgba(87, 118, 160, 0.35);
+	font-size: 13px;
+	color: white;
+	text-shadow: 0px 0px 6px rgb(66, 115, 186);
+	border: solid 1px rgb(109, 142, 190);
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+.boxListings .annName {
+	font-size: 16px;
+	font-family: open_sansbold;
+	margin-top: -9px;
+}
+.boxListings .annDate {
+	position: absolute;
+	top: 14px;
+	right: 70px;
+	font-family: open_sanssemibold;
+	text-align: right;
+}
+.boxListings .annTime {
+	padding-right: 3px;
+	font-family: open_sanssemibold;
+	white-space: nowrap;
+}
+.annContainer .boxListings .infoLink {
+	float: right;
+	margin: -10px -10px 0 0;
+}
+
+
+/* ==== ANNOUNCEMENTS - LINED LISTING STYLES ==== */
+.annListing.linedListings {
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+	padding: 5px 0px;
+	font-family: open_sanssemibold, serif;
+	font-size: 13px;
+	color: rgb(27, 53, 106);
+	box-sizing: border-box;
+	display: table;
+}
+.annTitle.linedListings {
+	margin: 6px 0 0 25px;
+}
+.annContainer .linedListings .infoLink {
+	float: none;
+	margin: 0;
+}
+.linedListings .infoLink img {
+	width: 80%;
+}
+.linedListings .annName {
+	font-size: 15px;
+}
+.annListing.linedListings div[class*="setFive"] {
+	display: table-cell;
+	vertical-align: top;
+}
+.setFive0, .setFive1, .setFive2, .setFive3, .setFive4, .setFive5, .setFive6 {
+	box-sizing: border-box;
+}
+.linedListings .setFive0 {
+	width: 9%;
+	padding: 6px 0px 0px 12px;
+	text-align: center;
+}
+.linedListings .setFive1 {
+	width: 30%;
+	padding: 6px 10px 10px 15px;
+	text-align: left;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFive2 {
+	width: 26%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFive3 {
+	width: 35%;
+	padding: 6px 10px 10px 10px;
+	text-align: left;
+	display: block; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFive4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFive5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /*  if width 0% then 'none' else 'block'  */
+}
+.linedListings .setFive6 {
+	width: 95%;
+	padding: 8px 8px 8px 8px;
+	text-align: center;
+}
+
+
+/* ===========================  LIST12 LISTINGS ============================  */
+.list12Container {
+	position: absolute;
+	opacity: 0;
+	left: 0px;
+	top: 0px;
+}
+.list12Container .list-window {
+	top: 43px;
+}
+.list12Container .list-window {
+	height: 618px;
+}
+.list12Container .listings {
+	border-bottom: none;
+}
+.list12Listing.boxListings{
+	width: 329px;
+	min-height: 150px;
+	background: rgba(87, 118, 160, 0.35);
+	font-size: 15px;
+	color: white;
+	text-shadow: 0px 0px 6px rgb(66, 115, 186);
+	border: solid 1px rgb(109, 142, 190);
+	border-radius: 20px;
+	box-sizing: border-box;
+	margin: 23px 0 0 23px;
+	padding: 22px;
+	float: left;
+}
+.list12Container .boxListings .infoLink {
+	float: right;
+	margin: -10px -10px 0 0;
+}
+.boxListings .setSix1 {
+	font-size: 16px;
+	font-family: open_sansbold;
+}
+
+/* ==== LIST12 - LINED LISTING STYLES ==== */
+.list12Listing.linedListings {
+	width: 100%;
+	font-size: 15px;
+	box-sizing: border-box;
+	margin: 0px 0px 5px 0px;
+	padding: 5px 0px;
+	font-family: open_sanssemibold, serif;
+	font-size: 17px;
+	color: rgb(27, 53, 106);
+	display: table;
+}
+.list12Title.linedListings {
+	margin: 6px 0 0 25px;
+}
+.list12Container .linedListings .infoLink {
+	float: none;
+	margin: 0;
+}
+.list12Listing.linedListings div[class*="setSix"] {
+	display: table-cell;
+	vertical-align: middle;
+}
+.setSix0, .setSix1, .setSix2, .setSix3, .setSix4, .setSix5, .setSix6 {
+	box-sizing: border-box;
+}
+.linedListings .setSix0 {
+	width: 10%;
+	padding: 2px 0px 0px 12px;
+	text-align: center;
+}
+.linedListings .setSix1 {
+	width: 30%;
+	padding: 6px 10px 10px 15px;
+	text-align: left;
+	display: block; /* if width 0% then 'none' else 'block'  */
+}
+.linedListings .setSix2 {
+	width: 30%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	display: block; /* if width 0% then 'none' else 'block'  */
+}
+.linedListings .setSix3 {
+	width: 30%;
+	padding: 6px 10px 10px 10px;
+	text-align: center;
+	display: block; /* if width 0% then 'none' else 'block'  */
+}
+.linedListings .setSix4 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /* if width 0% then 'none' else 'block'  */
+}
+.linedListings .setSix5 {
+	width: 0%;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	display: none; /* if width 0% then 'none' else 'block'  */
+}
+.linedListings .setSix6 {
+	width: 95%;
+	padding: 8px 8px 8px 8px;
+	text-align: center;
+}
+
+/* ==================== GENERIC SOLO SCROLL BUTTONS ==================== */
+.scrollSpaceUp,
+.scrollSpaceDown {
+	position: absolute;
+	display: none;
+	background: #1B356A;
+	width: 34px;
+	height: 36px;
+	color: #FFFFFF;
+	border-radius: 10px 10px 10px 10px;
+	text-align: center;
+}
+.scrollSpaceUp {
+	left: 200px;
+}
+.scrollSpaceDown {
+	left: 250px;
+}
+
+
+/* ============================= KEYBOARD ============================= */
+#keyboard {
+	position: absolute;
+	top: 1448px;
+	left: 143px;
+	width: 594px;
+	height: 78px;
+	margin: 6px 0 0 0;
+	padding-top: 12px;
+	display: none;
+}
+#scrollSearch {
+	position: absolute;
+	top: 1508px;
+	left: 367px;
+	opacity: 0;
+}
+#scrollSpace {
+	position: absolute;
+	top: 1508px;
+	left: 500px;
+	display: none;
+}
+.alphaBtn, .scrollUpBtn, .scrollDownBtn, .scrollSpaceDownBtn, .scrollSpaceUpBtn {
+	width: 34px;
+	height: 36px;
+}
+.alphaBtn,
+.listBtn,
+.scrollUpBtn,
+.scrollDownBtn,
+.searchKeyboard,
+.scrollSpaceUpBtn,
+.scrollSpaceDownBtn,
+#compFilter,
+#indFilter {
+	background: #234586;
+	color: #FFFFFF;
+	line-height: 2.3;
+	border-radius: 10px 10px 10px 10px;
+	text-align: center;
+	float: left;
+	margin: 0 6px 6px 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+.scrollUpBtn, .scrollSpaceUpBtn {
+	margin-right: 0;
+}
+.scrollDownBtn, .scrollSpaceDownBtn {
+	margin-right: 0;
+}
+#scrollSearch .scrollUpBtn, 
+#scrollSearch .scrollDownBtn,
+.scrollSpaceUpBtn,
+.scrollSpaceDownBtn {
+	margin-right: 6px;
+	padding-right: 1px;
+}
+.iconSVG {
+	width: 34px;
+	fill: white;
+	box-sizing: border-box;
+	background: #234586 !important;
+}
+.iconSVG.scrollDownBtn {
+	padding: 4px 0px 3px 1px !important;
+}
+.iconSVG.scrollUpBtn {
+	padding: 3px 0px 4px 1px !important;
+}
+.svgCompFilter, .svgIndFilter {
+	width: 34px;
+	opacity: 1;
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 30px;
+	margin-top: 3px !important;
+}
+.searchKeyboard {
+	padding: 0 15px;
+}
+#searchField {
+	position: absolute;
+	top: 1476px;
+	left: 756px;
+	width: 180px;
+	height: 36px;
+	color: white;
+	font-size: 24px;
+	text-shadow: 0 0 5px #234586;
+	padding-top: 2px;
+	background: #6A92C7;
+	display: none;
+	z-index: 1000;
+	border: solid 1px #fff;
+	border-radius: 10px;
+	box-shadow: inset 4px 4px 4px #4A72A7, 0 0 5px #61728C;
+	overflow: hidden;
+	cursor: text;
+}
+#textEntry {
+	width: 140px;
+	text-align: center;
+	float: left;
+}
+.clearField {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background: #234586;
+	height: 30px;
+	width: 50px;
+	padding: 5px 0px 3px 0px;
+	border-left: solid 1px #1E4080;
+	cursor: pointer;
+}
+.clearSearchSVG {
+	width: 38px;
+	height: 38px;
+	margin: -4px 0 0 5px;
+}
+.listBtn {
+	width: 74px;
+}
+.backBtn {
+	position: absolute;
+	display: none;
+	left: 255px;
+	top: -60px;
+	width: 84px;
+	height: 36px;
+	background: #1B356A;
+	color: #FFFFFF;
+	line-height: 2.3;
+	border-radius: 10px 10px 10px 10px;
+	text-align: center;
+	margin: 0 6px 6px 0;
+}
+.disable {
+	pointer-event: none;
+}
+.coverKeyboard {
+	position: absolute;
+	display: none;
+	left: 10px;
+	top: 650px;
+	width: 622px;
+	height: 101px;
+}
+#compFilter, #indFilter {
+	width: 34px;
+	height: 36px;
+	margin-right: 6px;
+	background: rgba(84, 130, 194, 0); /*#5482C2*/
+	border-radius: 10px;
+}
+#compFilter {
+	left: 335px;
+	background: #234586;
+}
+#indFilter {
+	left: 375px;
+	background: #234586;
+}
+
+
+/* ========================  TSLIVE TRAFFIC and AMENITIES======================== */
+.trafficCont,
+.amenityCont,
+.transitCont {
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	left: 20px;
+	top: 108px;
+	width: 1040px;
+	height: 1419px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+	z-index: 10;
+}
+.iframeSpecs {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* =========================  TSLIVE WEATHER  ========================  */
+.weatherContainer {
+	position: absolute;
+	display: table-cell;
+	left: 40px;
+	top: 837px;
+	width: 529px;
+	height: 142px;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, .5);
+	z-index: 2100;
+	opacity: 0;
+}
+.weatherContainerSingle {
+	position: absolute;
+	display: table-cell;
+	top: -10px;
+	width: 270px;
+	height: 110px;
+	z-index: 2100;
+	opacity: 1;
+}
+.weatherContainerSingleWrapper {
+	position: absolute;
+	left: 176px;
+	top: 864px;
+	width: 258px;
+	height: 90px;
+	background: rgba(141, 178, 210, 0.29);
+	border: solid #9BBFDE 1px;
+	border-radius: 10px;
+	z-index: 2100;
+}
+.weatherData {
+	position: absolute;
+	z-index: 1;
+}
+
+
+/* ==========================  TSLIVE NEWS  ========================  */
+.newsContainer {
+	position: absolute;
+	left: 0px;
+	top: 1707px;
+	width: 1080px;
+	height: 145px;
+	background: linear-gradient(to bottom, #cfe2fd 0%, #B6CAE6 100%);
+	margin-top: 12px;
+	z-index: 1;
+}
+
+
+/* ============================ SLIDESHOW ========================== */
+.slideWrapper {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: table;
+	opacity: 0;
+}
+.pics, .pics2, .pics3 {
+	position: absolute;
+	overflow: hidden;
+	display: table-cell;
+}
+/* ===Widescreen 16x9 ===*/
+.pics {
+	left: 0px; 
+	top: 101px;  
+	width: 1080px; 
+	height: 579px; 
+	background: #C6D4EC;
+	background: linear-gradient(#8AA4D4, #c6d4ec, #A8BEE6);
+}
+/* ===Full Size ===*/
+.pics2, .pics3 {
+	left: 0px; 
+	top: 101px;  
+	width: 1080px; 
+	height: 1335px; 
+	background: #C6D4EC;
+	background: linear-gradient(#8AA4D4, #c6d4ec, #A8BEE6);
+}
+.pics img, .pics2 img, .pics3 img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+
+/* ======================== SCROLLING MESSAGES =========================== */
+#scrollingMessage {
+	position: absolute;
+	top: 1864px;
+	width: 1024px;
+	height: 56px;
+	background: #4a6fae;
+	background: linear-gradient(to left, #4a6fae 0%, #6992c7 50%, #4a6fae 100%);
+	z-index: 2000;
+}
+#tickerMessage {
+	opacity: 0; /* hide scroller ugly state, will show when script loads */
+}
+#scrollingMessage>.tickercontainer {
+	position: absolute;
+	overflow: hidden;
+	background: rgba(0, 88, 149, 0);
+	width: 1024px;
+	height: 75px;
+	margin: 0;
+	padding: 0;
+}
+/* this serves as a mask. so you get a sort of padding both left and right */
+.tickercontainer .mask {
+	position: relative;
+	overflow: hidden;
+	left: 0px;
+	top: 12px;
+	width: 1024px;
+}
+ul.newsticker {
+	position: relative;
+	background: rgba(255, 0, 0, .5);
+	left: 1024px; /* must be @ 20px more than width */ 
+	font-size: 25px;
+	font-style: italic;
+	color: #FFFFFF;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+ul.newsticker li {
+	float: left; /* important - display inline gives incorrect results when you check for elem's width */
+	margin: 0;
+	padding: 0px;
+	white-space: nowrap; /* important - keeps text from wrapping */
+}
+
+
+
+/* ================================== TS Info ======================== */
+.tsInfo {
+	position: absolute;
+	left: 600px;
+	top: 1058px;
+	width: 720px;
+	height: 18px;
+	font-family: open_sanssemibold, serif;
+	font-size: 14px;
+	color: #213967;
+	text-align: center;
+	vertical-align: middle;
+	display: none;
+}
+
+/* ========================== DIRECTORY TEXT ======================== */
+.directoryTextCont {
+	position: absolute;
+	top: 1476px;
+	left: 0;
+	width: 1080px;
+	display: none;
+	z-index: 10;
+}
+.directoryText {
+	padding: 40px 0px;
+	font-size: 192px;
+	color: #BBCAE8;
+	text-align: center;
+	height: 120px;
+	letter-spacing: 2px;
+	line-height: .6;
+	background: #D7E3F8;
+	display: none;
+}
+.touchText {
+	padding: 19px;
+	font-size: 35px;
+	font-family: open_sanssemibold, sans-serif;
+	color: #4A659A;
+	text-align: center;
+	background: #A3BDE6;
+	line-height: 1.1;
+	display: none;
+}
+
+/* =============================== PDF VIEWER ============================= */
+#pdfWindow {
+	position: absolute;
+	top: 332px; 
+	left: 24px;
+	width: 1015px;
+	height: 1350px;
+	display: none;
+	z-index: 3000;
+	border: solid rgb(138, 169, 226) 3px;
+}
+#pdfMask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.65);
+	z-index: 2900;
+	display: none;
+}
+/*.closePDF {
+	position: absolute;
+	top: 1219px;
+	left: 100px;
+	padding: 3px 35px;
+	font-size: 24px;
+	background: rgb(74, 112, 163);
+	color: white;
+	border: solid 1px rgb(146, 164, 189);
+	font-family: open_sanssemibold, serif;
+	z-index: 3200;
+	display: none;
+	cursor: pointer;
+}*/
+.closePDF {
+	position: absolute;
+	top: 1711px;
+	left: 470px;
+	width: 130px;
+	height: 51px;
+	padding-top: 8px;
+	font-size: 24px;
+	background: rgb(48, 85, 155);
+	color: white;
+	/*border: solid 1px white;*/
+	border-radius: 12px;
+	font-family: open_sanssemibold, serif;
+	box-shadow: 0 0 0px 1.5px #ffffff,0 0 15px rgba(0, 0, 0, 0.43);
+	z-index: 3200;
+	text-align: center;
+	box-sizing: border-box;
+	display: none;
+	cursor: pointer;
+}
+.pdfParent a {
+	width: 100%;
+	pointer-events: none;
+	text-decoration: none;
+	float: left;
+}
+
+/* ================================ URL MODAL =========================== */
+#urlMask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.65);
+	z-index: 2900;
+	display: none;
+}
+#urlModal {
+	position: absolute;
+	top: 379px;
+	left: 20px;
+	width: 1034px;
+	height: 1392px;
+	display: none;
+	z-index: 3000;
+	border: solid rgb(138, 169, 226) 3px;
+}
+.iframeWindow {
+	width: 100%;
+	height: 100%;
+	border: none;
+	background: rgba(86, 118, 150, 0.7);
+}
+.closeURL, .backURL {
+	position: absolute;
+	top: 1800px;
+	width: 130px;
+	height: 51px;
+	padding-top: 8px;
+	font-size: 24px;
+	background: rgb(48, 85, 155);
+	color: white;
+	/*border: solid 1px white;*/
+	border-radius: 12px;
+	font-family: open_sanssemibold, serif;
+	box-shadow: 0 0 0px 1.5px #ffffff,0 0 15px rgba(0, 0, 0, 0.43);
+	z-index: 3200;
+	text-align: center;
+	box-sizing: border-box;
+	display: none;
+	cursor: pointer;
+}
+.closeURL {
+	left: 390px;
+}
+.backURL {
+	left: 540px;
+}
+
+
+/* ================================ VIDEO MODAL =========================== */
+#videoMask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.65);
+	z-index: 2900;
+	display: none;
+}
+#videoModal {
+	position: absolute;
+	top: 681px;
+	left: 25px;
+	width: 1024px;
+	height: 576px;
+	display: none;
+	z-index: 3000;
+	border: solid rgb(138, 169, 226) 3px;
+}
+#videoModal.videoModalADA {
+	top: 1160px;
+}
+.closeVideo {
+	position: absolute;
+	top: 1289px;
+	left: 453px;
+	padding: 9px 35px;
+	font-size: 24px;
+	background: rgb(48, 85, 155);
+	color: white;
+	/*border: solid 1px white;*/
+	border-radius: 12px;
+	font-family: open_sanssemibold, serif;
+	box-shadow: 0 0 0px 1.5px #ffffff,0 0 15px rgba(0, 0, 0, 0.43);
+	z-index: 3200;
+	display: none;
+	cursor: pointer;
+}
+.closeVideoADA {
+	top: 1760px;
+}
+.playVideo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: rgba(0,0,0,0)
+}
+.blockYouTube {
+	position: absolute;
+	top: 822px;
+	left: 1437px;
+	width: 200px;
+	height: 100px;
+	z-index: 10;
+}
+
+
+/* ================================ JPG VIEWER =========================== */
+#jpgWindow {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 3000;
+	display: table;
+}
+#jpgMask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.65);
+	z-index: 2900;
+	display: none;
+}
+.jpgWrapper {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.infoLink .jpgImg {
+	display: none;
+}
+.jpgImg {
+	max-width: 1800px;
+	max-height: 950px;
+}
+
+
+/* ================================= ADA MENU ============================= */
+.adaMenu {
+	position: absolute;
+	top: 1864px;
+	left: 1024px;
+	height: 48px;
+	padding: 4px;
+	background: rgb(9, 97, 255);
+	z-index: 2500;
+	cursor: pointer;
+}
+.adaFix {
+	position: absolute;
+	top: 1860px;
+	left: 1020px;
+	width: 60px;
+	height: 60px;
+	z-index: 3000;
+	display: none;
+}
+.adaOn {
+	top: 45px; 
+	left: 1024px; 
+	padding: 4px;
+	border: none;
+	border-radius: 0;
+}
+.adaWrapper {
+	position: absolute;
+	width: 1080px; 
+	height: 101px; 
+	top: 1819px; 
+	left: 0px;
+	overflow: hidden;
+}
+.adaNav {
+	position: absolute;
+	width: 1080px; 
+	height: 101px; 
+	top: 101px; 
+	left: 0px;
+	background: #79a4f0;
+	padding: 12px 20px 0px 0px;
+	box-sizing: border-box;
+	z-index: 2400;
+}
+.adaBtnCont {
+	position: relative;
+	top: 33px;
+	margin-left: 35px;
+}
+.adaNav .btnText {
+	margin: 0 0 0 65px;
+	float: left;
+}
+.adaBtnWrapper {
+	padding: 0 7px;
+	color: white;
+	display: inline-block;
+	background: #30559b;
+	border-top: solid 1px #cee2ff;
+	border-right: solid 1px #cee2ff;
+	border-bottom: solid 1px #cee2ff;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.adaBtnWrapper:first-child {
+	border-left: solid 1px #cee2ff;
+}
+.adaBtn {
+	width: 130px;
+	height: 46px;
+	color: white;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1.2;
+	display: table-cell;
+}
+#adaKeyboard {
+	position: absolute;
+	width: 1080px;
+	top: 0;
+	left: 0px;
+	background: #91aedc;
+}
+#adaKeyboard .alphaBtn,
+#adaKeyboard .listBtn,
+.adaScrollUpBtn,
+.adaScrollDownBtn,
+#adaKeyboard .searchKeyboard {
+	background: #2c5595;
+	color: #FFFFFF;
+	line-height: 2.3;
+	border-radius: 0;
+	text-align: center;
+	float: left;
+	margin: 0 0 1px 1px;
+	cursor: pointer;
+}
+#adaKeyboard .listBtn {
+	width: 67px;
+}
+.adaScrollUpBtn {
+	margin-right: 0;
+}
+.adaScrollDownBtn {
+	margin-right: 0;
+}
+.adaScrollUpBtn,  .adaScrollDownBtn {
+	width: 50px;
+	height: 36px;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-color: #2c5595 !important;
+	float: right;
+}
+.iconSVG.adaScrollDownBtn {
+	padding: 3px 0px 3px 1px !important;
+}
+.iconSVG.adaScrollUpBtn {
+	padding: 3px 0px 3px 1px !important;
+}
+
+
+/*================ TIMEOUT - MORE TIME PROMPT =====================*/
+.moreTimeMask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.75);
+	display: none;
+	z-index: 4000;
+}
+#moreTime {
+	position: absolute;
+	top: 900px;
+	left: 235px;
+	width: 610px;
+	height: 140px;
+	background: #1D5A91;
+	font-size: 36px;
+	color: white;
+	border: solid 6px white;
+	border-radius: 12px;
+	z-index: 9999;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 37px 40px;
+	box-shadow: 0 0 45px rgba(0, 0, 0, 0.37);
+	display: none;
+	z-index: 4100;
+}
+.timeYes, .timeNo {
+	position: absolute;
+	bottom: 30px;
+	border: solid 1px white;
+	border-radius: 12px;
+	padding: 12px 20px;
+	width: 60px;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+}
+.timeYes {
+	left: 90px;
+}
+.timeNo {
+	right: 90px;
+}
+#timeLeft {
+	margin-top: 26px;
+	display: none;
+}
+
+/*======================== TWITTER =======================*/
+#tweetsCont {
+	position: absolute;
+	top: 1864px;
+	left: 0;
+	width: 1024px;
+	height: 56px;
+	background: #2B4B86;
+	z-index: 3000;
+}
+.twitterIcon {
+	position: absolute;
+	top: 1870px;
+	left: 10px;
+	height: 45px;
+	fill: white;
+	width: 45px;
+	z-index: 3000;
+}
+.title {
+	font-size: 22px;
+	margin: 0px 0px 0px 20px;
+	color: #777;
+	text-align: left;
+}
+#tweetStore {
+	display: none;
+}
+
+/*** dev buttons ***/
+#slideBtn, #allBtn, #allAutoBtn,
+#singleBtn, #stopDisplayBtn,
+#reloadBtn {
+	width: 130px;
+	height: 40px;
+	margin: 5px 5px 5px 5px;
+}
+
+/*** slide mode rules  ***/
+#tweetSlideHolder {
+	position: absolute;
+	left: 60px; 
+	top: 0px;
+	width: 950px;
+	height: 56px;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+	background: transparent;
+	overflow: hidden;
+}
+.slideCont {
+	position: absolute;
+	left: 0px; 
+	top: 0px;
+	width: 100%; 
+	height: 56px;
+	padding: 0px;
+	overflow: hidden;
+	opacity: 1.0;
+	display: table;
+}
+.slideTweet {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 15px;
+	line-height: 16px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*** static mode rules ***/
+#tweetStaticCont {
+	position: absolute;
+	left: 0px; top: 100px; /*35px;*/
+	width: 400px; height: 500px;
+	border: 1px solid #777;
+	padding: 4px;
+	overflow: auto;
+}
+
+/*** auto mode rules ***/
+#tweetAutoScrollFrame {
+	position: absolute;
+	left: 0px; top: 100px; /*35px;*/
+	width: 400px; height: 500px;
+	padding: 0px;
+	border: 1px solid #777;
+	overflow: hidden;
+}
+#tweetAutoScrollCont1,
+#tweetAutoScrollCont2,
+#tweetAutoScrollCont3 {
+	position: relative;
+	left: 0px; top: 0px;
+	width: 392px; /*height: 500px;*/
+	padding: 4px;
+	border-top: 1px solid #777;
+}
+
+/*** single mode rules ***/
+#tweetSingleFrame {
+	position: absolute;
+	left: 0px; top: 100px; /*35px;*/
+	width: 400px; height: 120px;
+	max-width: 400px; max-height: 120px;
+	overflow: hidden; /*auto*/
+	border: 1px solid #000;
+}
+#tweetSingleCont {
+	padding: 8px;
+	overflow: hidden;
+}
+
+/* tweet text formatting */
+#tweetSlideFrame .tweet,
+#tweetSlideFrame .error,
+#tweetStaticCont .tweet,
+#tweetStaticCont .error,
+#tweetAutoScrollCont1 .tweet,
+#tweetAutoScrollCont1 .error,
+#tweetAutoScrollCont2 .tweet,
+#tweetAutoScrollCont2 .error,
+#tweetAutoScrollCont3 .tweet,
+#tweetAutoScrollCont3.error,
+#tweetSingleCont .tweet,
+#tweetSingleCont .error {
+	padding: 10px 0px 0px 15px;
+}
+/* screenname */
+.slideTweet  span:first-of-type,
+#tweetStaticCont span:first-of-type,
+#tweetAutoScrollCont1 span:first-of-type,
+#tweetAutoScrollCont2 span:first-of-type,
+#tweetAutoScrollCont3 span:first-of-type,
+#tweetSingleCont span:first-of-type {
+	font-weight: bold;
+}
+/* date-time */
+.slideTweet span:last-of-type,
+#tweetStaticCont span:last-of-type,
+#tweetAutoScrollCont1 span:last-of-type,
+#tweetAutoScrollCont2 span:last-of-type,
+#tweetAutoScrollCont3 span:last-of-type,
+#tweetSingleCont span:last-of-type {
+	font-size: 13px;
+	font-style: italic;
+}
+/* errors */
+.slideTweet .error,
+#tweetStaticCont .error,
+#tweetSingleCont .error,
+#tweetAutoScrollCont1 .error,
+#tweetAutoScrollCont2 .error,
+#tweetAutoScrollCont3 .error {
+	font-style: italic;
+	color: #f00;
+}
+
+
+/*======================= CLEARFIX =====================*/
+.clearfix:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	content: ".";
+	height: 0;
+}
+
+
+/* ======================= SECRET SLIDESHOW ====================== */
+.forceSlideshow1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	/*background: rgba(255,0,0,.5);*/
+}
+.forceSlideMask {
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 1080px;
+	height: 1850px;
+	/*background: rgba(255,0,0,.5);*/
+	display: none;
+	z-index: 3900;
+}
+
+/* ======================= DEBUG ====================== */
+.debugTest {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 25px 0 15px;
+	font-size: 20px;
+	background: #eee;
+	z-index: 9999;
+	text-align: right;
+	display: none;
+}
+.debugTest p {
+	margin: 3px 0;
+}
+
+/*======================================== FONTS ================================== */
+@font-face {
+	font-family: 'open_sanslight';
+	src: url('../fonts/OpenSans-Light-webfont.eot');
+	src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Light-webfont.woff') format('woff'), url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sansregular';
+	src: url('../fonts/OpenSans-Regular-webfont.eot');
+	src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Regular-webfont.woff') format('woff'), url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sanssemibold';
+	src: url('../fonts/OpenSans-Semibold-webfont.eot');
+	src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sansbold';
+	src: url('../fonts/OpenSans-Bold-webfont.eot');
+	src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-Bold-webfont.woff') format('woff'), url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sansextrabold';
+	src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
+	src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'), url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'), url('../fonts/OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'droid_serifbold';
+	src: url('../fonts/DroidSerif-Bold-webfont.eot');
+	src: url('../fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+		url('../fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+		url('../fonts/DroidSerif-Bold-webfont.svg#droid_serifbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

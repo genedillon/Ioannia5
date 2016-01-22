@@ -43,7 +43,23 @@
 			<div class="col0">
 				<% do until qStaticIndentedList.EOF%>
 					<div class="companyListing clearfix" data-listing="<%response.write(qStaticIndentedList("ListingID"))%>" data-comp="<%response.write(qStaticIndentedList("CompanyName"))%>" data-type="<%response.write(qStaticIndentedList("Type"))%>">
-						<div class="setOne0"><a class="mapURL" href="../../companyanimatedmap.asp?ID=<%response.write (qStaticIndentedList("CompanyID"))%>&CODE=1-<%response.write (qStaticIndentedList("Building"))%>">MAP</a></div>
+
+						<div class="setOne0">
+
+				<!-- 		<a class="mapURL" href="animatedmap.asp?ID=<%response.write (qStaticIndentedList("CompanyID"))%>&CODE=1-<%response.write (qStaticIndentedList("Building"))%>"> -->
+
+<a class="wayfinder" href="#" target="_top" data-company="<%response.write(qStaticIndentedList("CompanyID"))%>">
+				MAP
+			</a>
+
+
+<!-- 						MAP
+
+						</a> -->
+
+						</div>
+
+
 						<div class="setOne1"><%response.write (qStaticIndentedList("ListingName"))%></div>
 						<div class="setOne2"><%response.write (qStaticIndentedList("Suite"))%></div>
 						<div class="setOne3"></div>

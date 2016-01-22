@@ -5,6 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TouchSource Directory</title>
+
+		<link rel="stylesheet" type="text/css" href="scriptFiles/lightbox/lightbox.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="scriptFiles/infobox/infoboxStyles.css" media="screen" />
+
+
 <!-- Get the date -->
 <% todaydate = FormatDateTime(Date(), 0)%>
 
@@ -159,6 +164,46 @@ set conn = nothing
 	closeSequence();
 });
 </script> 
+
+
+<script language="javascript" src="scriptFiles/jquery-2.1.4.js"></script>
+<script language="javascript" src="scriptFiles/jquery.cookie.js"></script>
+<script language="javascript" src="scriptFiles/fabric.js"></script>
+<script language="javascript" src="scriptFiles/lightbox/lightbox.js"></script>
+<script>
+// Wait until the DOM has loaded before querying the document
+$(document).ready(function()
+{
+	/*
+	* Restore the state of the window for better experience
+	*/
+	setTimeout(function()
+	{
+		$("html, body").scrollTop($.cookie("currentScroll"));
+	}, 100)
+	/*
+	* Each button image  will make ajax request for map
+	*/
+	$(".wayfinder").on('click', function(event)
+	{
+		/*
+		* Save the window scroll state when the user finds the map
+		*/
+		$.cookie('currentScroll', window.scrollY);
+		/*
+		* Load the animated map and launch it in a modal
+		*/
+		$.get('animatedmap.asp?Companies='+$(this).data("company"), function(data)
+		{
+			/*
+			* Open lightbox with an object for settings
+			*/
+			lightbox.open(data);
+		});
+	});
+});
+</script>
+
 
 </body>
 </html>
